@@ -1,0 +1,22 @@
+* {
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+
+#All {
+	margin-top: -20px;
+	min-width: 900px;
+}
+
+#IntroImage {
+	height: 97%;
+	width: auto;
+}
+
+#td_DiffSetting {
+	width: 480px;
+}
+
+#DiffSetting, #Extra {
+	margin-left: 35px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>nTrader</title>
+	<meta http-equiv="description" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="jquery/jMenu.jquery.css" type="text/css" />
+	<link rel="stylesheet" href="CSS/orbit-1.2.3.css">	
+	<link rel="stylesheet" href="CSS/demo-style.css">
+
+</head>
+<body>
+
+<h1>nTrader</h1>
+
+<ul id="jMenu">
+	<li><a class="fNiv">Homepage</a></li>
+	
+	<li><a class="fNiv">About Us</a></li>
+	
+	<li><a class="fNiv">nTrader</a></li>
+	
+	<li><a class="fNiv">Subscript</a></li>
+	
+	<li><a class="login-window" href="#login-box">Sign In</a></li>
+	
+</ul>
+
+<!-- ==================== Login Popup (http://www.alessioatzeni.com/blog/login-box-modal-dialog-window-with-css-and-jquery/) ==================== -->
+<div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
+          <form method="post" class="signin" action="#">
+                <fieldset class="textbox">
+            	<label class="username">
+                <span>Username or email</span>
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                <label class="password">
+                <span>Password</span>
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                <button class="submit button" type="button">Sign in</button>
+                <p>
+                <a class="forgot" href="#">Forgot your password?</a>
+                </p>        
+                </fieldset>
+          </form>
+</div>
+
+
+<!-- ==================== ORBIT Slider (Content) ==================== -->
+	<div class="container">
+		<div id="featured"> 
+			<div class="content" style="">
+				<h1>Orbit does content now.</h1>
+				<h3>Highlight me...I'm text.</h3>
+			</div>
+			<a href=""><img src="dummy-images/overflow.jpg" /></a>
+			<img src="dummy-images/captions.jpg" data-caption="#htmlCaption" />
+			<img src="dummy-images/features.jpg"  />
+		</div>
+		<!-- Captions for Orbit -->
+		<span class="orbit-caption" id="htmlCaption"><strong>I'm A Badass Caption:</strong> I can haz <a href="#">links</a>, <em>style</em> or anything that is valid markup :)</span>
+	</div>	
+
+
+
+<!-- ==================== Vertical Tab ==================== -->
+	<section id="wrapper" class="wrapper">
+		<h1 class="title">Happenings</h1>
+		<div id="v-nav">
+			<ul>
+				<li tab="tab1" class="first current">Goals & Mission</li>
+				<li tab="tab2">Announcement</li>
+				<li tab="tab4" class="last">Updates</li>
+			</ul>
+
+                	<div class="tab-content">
+				<h4>Goals & Mission</h4>
+                	</div>
+
+                	<div class="tab-content">
+				<h4>Announcement</h4>
+                	</div>
+
+                	<div class="tab-content">
+			 	<h4>Updates</h4>                   
+                	</div>
+            	</div>
+        </section>
+
+ 
+        <!-- Include Scripts -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+	<script type="text/javascript" src="http://benalman.com/code/projects/jquery-hashchange/jquery.ba-hashchange.js"></script>       
+	<script type="text/javascript" src="JAVA/script.js"></script>
+
+
+
+
+
+	<script type="text/javascript" src="jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui.js"></script>
+	<script type="text/javascript" src="jquery/jMenu.jquery.js"></script>
+	<script type="text/javascript">
+  		$(document).ready(function(){
+			$("#jMenu").jMenu({
+				openClick : true,
+				ulWidth : 'auto',
+				effects : {
+					effectSpeedOpen : 200,
+					effectSpeedClose : 200,
+					effectTypeOpen : 'slide',
+					effectTypeClose : 'slide',
+					effectOpen : 'linear',
+					effectClose : 'linear'
+				},
+				TimeBeforeOpening : 100,
+				TimeBeforeClosing : 100,
+				animatedText : false,
+				paddingLeft: 1
+			});
+		})
+
+	</script>
+
+
+
+<!-- ==================== ORBIT Slider (Loading) ==================== -->
+	<script type="text/javascript" src="JAVA/jquery.orbit-1.2.3.min.js"></script>
+
+	<script type="text/javascript">
+     		$(window).load(function() {
+         		$('#featured').orbit({
+              			bullets: true
+         		});
+     		});
+	</script>
+
+
+
+<!-- ==================== Login Popup ==================== -->
+
+	<script type="text/javascript">
+  	$(document).ready(function() {
+		$('a.login-window').click(function() {
+		
+                	//Getting the variable's value from a link 
+			var loginBox = $(this).attr('href');
+
+			//Fade in the Popup
+			$(loginBox).fadeIn(300);
+		
+			//Set the center alignment padding + border see css style
+			var popMargTop = ($(loginBox).height() + 24) / 2; 
+			var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		
+			$(loginBox).css({ 
+				'margin-top' : -popMargTop,
+				'margin-left' : -popMargLeft
+			});
+		
+			// Add the mask to body
+			$('body').append('<div id="mask"></div>');
+			$('#mask').fadeIn(300);
+		
+			return false;
+		});
+	
+		// When clicking on the button close or the mask layer the popup closed
+		$('a.close, #mask').live('click', function() { 
+	  		$('#mask , .login-popup').fadeOut(300 , function() {
+				$('#mask').remove();  
+			}); 
+			return false;
+		});
+	});
+	</script>
+
+</body>
+</html>

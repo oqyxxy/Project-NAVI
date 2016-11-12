@@ -1,0 +1,40 @@
+* {
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+#All {
+	min-width: 1000px;
+	margin-top: -20px;
+	height: auto;
+}
+
+.Stickman {
+	height: 35%;
+	width: auto;
+}
+
+#Underlines {
+	font-size:30px;
+	font-weight:bold;
+	border-style: solid;
+	border-width: 0px;
+	border-image:url(Images/hangword/border.png) 30 30 round;
+	-moz-border-image:url(Images/hangword/border.png) 30 30 round; /* Old Firefox */
+	-webkit-border-image:url(Images/hangword/border.png) 30 30 round; /* Safari and Chrome */
+	-o-border-image:url(Images/hangword/border.png) 30 30 round; /* Opera */
+}
+
+#Table_Definition {
+	font-size:18px;
+	margin-top: 40px;
+}
+
+#Title {
+	width: 100px;
+	font-weight:bold;
+	vertical-align: top;
+}
+
+#Definition {
+	max-width: 700px;
+}

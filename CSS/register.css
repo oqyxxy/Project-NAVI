@@ -1,0 +1,45 @@
+body {
+	font-family:Arial,Helvetica,sans-serif;
+}
+
+#All {
+	min-width: 900px;
+}
+
+#step {
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+	font-size:40pt;
+}
+
+#stepDesc {
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+	font-size:15pt;
+}
+
+
+#accountinfo, #personalinfo{
+	margin-left:20px;
+	min-width: 320px;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+}
+
+#confirm {
+	margin-left:20px;
+	width: 300px;
+	min-width: 280px;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+}
+
+#accountmask, #personalmask, #confirmmask {
+	position:absolute;
+	margin-left: 20px;
+}
+
+#confirmmask {
+	position:absolute;
+	margin-left: 20px;
+}

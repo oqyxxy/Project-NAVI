@@ -1,0 +1,49 @@
+table#wholetable {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+#wholetable
+{
+	text-align:center; 
+}
+
+td#wholetabletd
+{
+	width:350px;
+}
+
+#accountinfo
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AFEEEE), color-stop(1, #FFFFFF));
+	color:black;
+}
+
+
+#personalinfo
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #00BFFF), color-stop(1, #FFFFFF));
+	color:black;
+}
+
+#tbname
+{
+	width:140px;
+}
+
+#confirm
+{
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFDAB9), color-stop(1, #FFFFFF));
+	color:black;
+}
+
+#tnc
+{
+	width:300px;
+}
+
+#Session
+{
+	font-weight:bold;
+	height: 40px;
+}
